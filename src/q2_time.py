@@ -12,14 +12,16 @@ from collections import defaultdict, Counter
 
 def q2_time(file_path: str) -> List[Tuple[str, int]]:
     emoji_counter = Counter()
-    emoji_pattern = re.compile('[\U0001F600-\U0001F64F]')  #This is the REGEX pattern for emojis
+    emoji_pattern = re.compile('[\U0001F600-\U0001F64F]')  # Basic emoji pattern
 
     with open(file_path, 'r') as file:
-        for line in file:
-            tweet = json.loads(line)
-            content = tweet.get('content', '')
-            emojis = emoji_pattern.findall(content)
-            emoji_counter.update(emojis)
+        data = file.readlines()
+
+    for line in data:
+        tweet = json.loads(line)
+        content = tweet.get('content', '')
+        emojis = emoji_pattern.findall(content)
+        emoji_counter.update(emojis)
 
     top_emojis = emoji_counter.most_common(10)
     return top_emojis
