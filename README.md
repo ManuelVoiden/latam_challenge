@@ -1,4 +1,26 @@
 # Data Engineer Challenge
+
+## Descripción General de la solución - Juan Manuel Marín Bedoya
+Con el fin de facilitar la ejecución de este repositorio y guiandose por los limites de tamaño de archivos de GitHub, dentro del repo se encuentra el archivo JSON con la información de tweets en formato .zip, ¡Desarrollé un script que al ejecutarlo extrae el contenido del .zip y lo deja listo para así poder ejecutar las demás funciones solución!
+
+```terminal
+    python .\src\zip_extraction.py
+```
+
+Una vez se tenga el codigo en local, ejecutar este script permite tener los archivos a disposición y listos para el correcto funcionamiento del resto del challenge.
+
+
+
+
+
+
+
+
+
+
+
+
+
 ​
 ## Descripción General
 Bienvenido al desafío para Ingenieros de Datos. En esta ocasión, tendrás la oportunidad de acercarte a parte de la realidad del rol, demostrar tus habilidades y conocimientos en procesamiento de datos con python y diferentes estructuras de datos.
